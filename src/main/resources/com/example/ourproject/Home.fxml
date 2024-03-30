@@ -1,0 +1,1104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ourproject.Home">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@stylesheet.css">
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EEEEEEFF;" BorderPane.alignment="CENTER">
+               <children>
+                  <TabPane fx:id="tabs" layoutX="266.0" layoutY="-23.0" prefHeight="1105.0" prefWidth="1660.0" tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab id="reports" text="Dashboard">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #EEEEEEFF;">
+                                 <children>
+                                    <Button fx:id="sectionButton" layoutX="246.0" layoutY="62.0" mnemonicParsing="false" onAction="#sectionButton" prefHeight="165.0" prefWidth="363.0" styleClass="Reports" />
+                                    <Label layoutX="417.0" layoutY="100.0" mouseTransparent="true" prefHeight="56.0" prefWidth="169.0" style="-fx-text-fill: white; -fx-font-size: 35;" text="Sections" />
+                                    <Label fx:id="sectionNumberLabel" alignment="CENTER" layoutX="420.0" layoutY="145.0" mouseTransparent="true" prefHeight="72.0" prefWidth="154.0" style="-fx-text-fill: white; -fx-font-size: 50px;" text="7 " />
+                                    <ImageView fitHeight="129.0" fitWidth="119.0" layoutX="276.0" layoutY="93.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@UI/Dep_logo.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="productButton" layoutX="663.0" layoutY="61.0" mnemonicParsing="false" onAction="#productButton" prefHeight="165.0" prefWidth="363.0" styleClass="Reports" />
+                                    <Label layoutX="843.0" layoutY="99.0" mouseTransparent="true" prefHeight="56.0" prefWidth="169.0" style="-fx-text-fill: white; -fx-font-size: 35;" text="Products" />
+                                    <Label fx:id="ProductNumberLabel" alignment="CENTER" layoutX="837.0" layoutY="144.0" mouseTransparent="true" prefHeight="72.0" prefWidth="154.0" style="-fx-text-fill: white; -fx-font-size: 50px;" text="0" />
+                                    <ImageView fitHeight="129.0" fitWidth="119.0" layoutX="694.0" layoutY="92.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@UI/ProductsLogo.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="employeesButton" layoutX="1073.0" layoutY="61.0" mnemonicParsing="false" onAction="#employeesButton" prefHeight="165.0" prefWidth="363.0" styleClass="Reports" />
+                                    <Label layoutX="1225.0" layoutY="99.0" mouseTransparent="true" prefHeight="56.0" prefWidth="204.0" style="-fx-text-fill: white; -fx-font-size: 35;" text="Employees" />
+                                    <Label fx:id="EmployeesNumbeLabel" alignment="CENTER" layoutX="1247.0" layoutY="144.0" mouseTransparent="true" prefHeight="72.0" prefWidth="154.0" style="-fx-text-fill: white; -fx-font-size: 50px;" text="7 " />
+                                    <ImageView fitHeight="129.0" fitWidth="119.0" layoutX="1104.0" layoutY="92.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@UI/employees_logo.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="suppliersButton" layoutX="170.0" layoutY="313.0" mnemonicParsing="false" onAction="#suppliersButton" prefHeight="165.0" prefWidth="363.0" styleClass="Reports" />
+                                    <Label layoutX="326.0" layoutY="351.0" mouseTransparent="true" prefHeight="56.0" prefWidth="184.0" style="-fx-text-fill: white; -fx-font-size: 35;" text="Suppliers" />
+                                    <Label fx:id="suppliersNumberLabel" alignment="CENTER" layoutX="344.0" layoutY="396.0" mouseTransparent="true" prefHeight="72.0" prefWidth="154.0" style="-fx-text-fill: white; -fx-font-size: 50px;" text="7 " />
+                                    <ImageView fitHeight="129.0" fitWidth="119.0" layoutX="201.0" layoutY="344.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@UI/Supplier_Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="customersButton" layoutX="587.0" layoutY="312.0" mnemonicParsing="false" onAction="#customersButton" prefHeight="165.0" prefWidth="363.0" styleClass="Reports" />
+                                    <Label layoutX="730.0" layoutY="350.0" mouseTransparent="true" prefHeight="56.0" prefWidth="206.0" style="-fx-text-fill: white; -fx-font-size: 35;" text="Customers" />
+                                    <Label fx:id="customerNumberLabel" alignment="CENTER" layoutX="761.0" layoutY="395.0" mouseTransparent="true" prefHeight="72.0" prefWidth="154.0" style="-fx-text-fill: white; -fx-font-size: 50px;" text="7 " />
+                                    <ImageView fitHeight="129.0" fitWidth="119.0" layoutX="612.0" layoutY="343.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@UI/customer.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="ordersButton" layoutX="997.0" layoutY="312.0" mnemonicParsing="false" onAction="#ordersButton" prefHeight="165.0" prefWidth="363.0" styleClass="Reports" />
+                                    <Label alignment="CENTER" layoutX="1168.0" layoutY="350.0" mouseTransparent="true" prefHeight="56.0" prefWidth="169.0" style="-fx-text-fill: white; -fx-font-size: 35;" text="Orders" />
+                                    <Label fx:id="ordersNumberLabel" alignment="CENTER" layoutX="1171.0" layoutY="395.0" mouseTransparent="true" prefHeight="72.0" prefWidth="154.0" style="-fx-text-fill: white; -fx-font-size: 50px;" text="7 " />
+                                    <ImageView fitHeight="129.0" fitWidth="119.0" layoutX="1028.0" layoutY="343.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@UI/Transactions.png" />
+                                       </image>
+                                    </ImageView>
+                                    <PieChart fx:id="pieChart" layoutX="1109.0" layoutY="561.0" />
+                                    <PieChart fx:id="pieChart1" layoutX="606.0" layoutY="562.0" />
+                                    <LineChart fx:id="orderLineChart" layoutX="128.0" layoutY="561.0" prefHeight="400.0" prefWidth="461.0">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </LineChart>
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab id="Products" text="Home">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #EEEEEEFF;">
+                                 <children>
+                                    <Polygon layoutX="1047.0" layoutY="6.0" mouseTransparent="true" points="-9.5, 54.0, 7.5, 54.0, -0.5, 64.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                                    <AnchorPane fx:id="topMenu" layoutX="60.0" layoutY="-2.0" prefHeight="239.0" prefWidth="1152.0" />
+                                    <AnchorPane layoutY="-4.0" prefHeight="190.0" prefWidth="1331.0" style="-fx-background-color: #ececec;">
+                                       <children>
+                                          <ImageView fitHeight="104.0" fitWidth="561.0" layoutX="83.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@UI/Logo.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="dateAndTime" alignment="CENTER" layoutX="751.0" layoutY="48.0" prefHeight="63.0" prefWidth="420.0" text="time" textAlignment="CENTER" />
+                                          <TextField fx:id="searchHome" layoutX="97.0" layoutY="129.0" onAction="#searchHomeFunction" prefHeight="60.0" prefWidth="716.0" promptText="Search for Product" styleClass="SearchTextFields">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </TextField>
+                                          <Button fx:id="searchButtonHome" layoutX="822.0" layoutY="129.0" mnemonicParsing="false" onAction="#searchHomeFunction" prefHeight="56.0" prefWidth="167.0" styleClass="pink" text="Search">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="showAllHome" layoutX="995.0" layoutY="130.0" mnemonicParsing="false" onAction="#showAllHomeFunction" prefHeight="56.0" prefWidth="167.0" styleClass="pink" text="Show All">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                       </children></AnchorPane>
+                                    <AnchorPane fx:id="rightMenu" layoutX="1212.0" prefHeight="1085.0" prefWidth="448.0">
+                                       <children>
+                                          <Label fx:id="orderNumberText" layoutX="31.0" layoutY="35.0" prefHeight="50.0" prefWidth="147.0" styleClass="orderNumberText" text="Order" />
+                                          <Button fx:id="orderButton" layoutX="41.0" layoutY="1008.0" mnemonicParsing="false" onAction="#orderFunction" prefHeight="56.0" prefWidth="167.0" styleClass="yellow" text="Order">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="cancelButton" layoutX="249.0" layoutY="1009.0" mnemonicParsing="false" onAction="#cancelFunction" prefHeight="56.0" prefWidth="167.0" styleClass="yellow" text="Cancel">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <Label fx:id="orderNumber" alignment="CENTER_RIGHT" layoutX="198.0" layoutY="35.0" prefHeight="50.0" prefWidth="226.0" styleClass="orderNumberText" text="#000000" />
+                                          <Label fx:id="orderNumberText2" layoutX="40.0" layoutY="918.0" prefHeight="50.0" prefWidth="166.0" styleClass="discount" text="Discount" />
+                                          <Label fx:id="discountLabel" alignment="CENTER_RIGHT" layoutX="223.0" layoutY="918.0" prefHeight="50.0" prefWidth="166.0" styleClass="discount" text="\$0.00" />
+                                          <Label fx:id="orderNumberText22" layoutX="41.0" layoutY="954.0" prefHeight="50.0" prefWidth="166.0" styleClass="total" text="Total" />
+                                          <Label fx:id="totalLabel" alignment="CENTER_RIGHT" layoutX="224.0" layoutY="954.0" prefHeight="50.0" prefWidth="166.0" styleClass="total" text="\$0.00" />
+                                          <AnchorPane layoutX="98.0" layoutY="108.0" prefHeight="791.0" prefWidth="448.0" styleClass="rightScrollPane" AnchorPane.bottomAnchor="186.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="108.0">
+                                             <children>
+                                                <ChoiceBox fx:id="orderType" layoutX="191.0" layoutY="31.0" prefHeight="48.0" prefWidth="215.0" styleClass="searchType" />
+                                                <Polygon layoutX="383.0" layoutY="-3.0" mouseTransparent="true" points="-9.5, 54.0, 7.5, 54.0, -0.5, 64.0" stroke="BLACK" strokeType="INSIDE" />
+                                                <Label layoutX="49.0" layoutY="40.0" prefHeight="34.0" prefWidth="138.0" style="-fx-font-size: 20px;" text="Order Type" textFill="WHITE" />
+                                                <TextField fx:id="customerOrSupplierSearch" layoutX="35.0" layoutY="114.0" onAction="#searchCustomerOrSupplierFunction" prefHeight="60.0" prefWidth="383.0" promptText="Search for Customer" styleClass="SearchTextFields">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </TextField>
+                                                <TableView fx:id="CustomerTableHome" editable="true" layoutX="36.0" layoutY="198.0" onMouseClicked="#CustomerTableHome" prefHeight="412.0" prefWidth="380.0" styleClass="yellowTable" stylesheets="@stylesheet.css">
+                                                   <columns>
+                                                      <TableColumn fx:id="customerIDColHome" prefWidth="76.727783203125" styleClass="col" text="ID" />
+                                                      <TableColumn fx:id="CustomerNameColHome" minWidth="0.0" prefWidth="177.2381591796875" styleClass="col" text="Name" />
+                                                      <TableColumn fx:id="phoneCustomerColHome" minWidth="0.0" prefWidth="121.7901611328125" styleClass="col" text="Phone" />
+                                                   </columns>
+                                                </TableView>
+                                                <Button fx:id="removeSelectionButton" layoutX="38.0" layoutY="639.0" mnemonicParsing="false" onAction="#removeSelectionHome" prefHeight="56.0" prefWidth="379.0" styleClass="yellow" text="Remove Selection">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <Label layoutX="52.0" layoutY="722.0" prefHeight="34.0" prefWidth="138.0" style="-fx-font-size: 20px;" text="Discount" textFill="WHITE" />
+                                                <TextField fx:id="discountTextField" layoutX="167.0" layoutY="712.0" prefHeight="52.0" prefWidth="245.0" styleClass="SearchTextFields" text="0.00">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </TextField>
+                                                <TableView fx:id="supplierTableHome" editable="true" layoutX="36.0" layoutY="198.0" onMouseClicked="#CustomerTableHome" prefHeight="412.0" prefWidth="380.0" styleClass="yellowTable" stylesheets="@stylesheet.css" visible="false">
+                                                   <columns>
+                                                      <TableColumn fx:id="supplierIDColHome" prefWidth="76.727783203125" styleClass="col" text="ID" />
+                                                      <TableColumn fx:id="supplierNameColHome" minWidth="0.0" prefWidth="177.2381591796875" styleClass="col" text="Name" />
+                                                      <TableColumn fx:id="supplierPhoneColHome" minWidth="0.0" prefWidth="121.7901611328125" styleClass="col" text="Phone" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </children></AnchorPane>
+                                    <TableView fx:id="itemOrderTable" editable="true" layoutX="84.0" layoutY="535.0" onMouseClicked="#orderItemTableClicked" prefHeight="513.0" prefWidth="1018.0" styleClass="table" stylesheets="@stylesheet.css">
+                                       <columns>
+                                          <TableColumn fx:id="numberOrderItem" editable="false" prefWidth="51.7708740234375" styleClass="col" text="#" />
+                                          <TableColumn fx:id="productIDOrderItem" editable="false" prefWidth="151.0" styleClass="col" text="Product ID" />
+                                          <TableColumn fx:id="productNameOrderItemCol" minWidth="0.0" prefWidth="303.0" styleClass="col" text="Product Name" />
+                                          <TableColumn fx:id="priceOrderItemCol" prefWidth="120.0" styleClass="col" text="Price" />
+                                          <TableColumn fx:id="quantityOrderItem" prefWidth="131.0" styleClass="col" text="Quantity" />
+                                          <TableColumn fx:id="descriptionOrderItem" prefWidth="257.0" styleClass="col" text="Note" />
+                                       </columns>
+                                    </TableView>
+                                    <TableView fx:id="searchTable" editable="true" layoutX="84.0" layoutY="256.0" prefHeight="235.0" prefWidth="1096.0" styleClass="table" stylesheets="@stylesheet.css">
+                                       <columns>
+                                          <TableColumn fx:id="productIDColSearch" prefWidth="148.44998168945312" styleClass="col" text="Product ID" />
+                                          <TableColumn fx:id="productNameColSearch" minWidth="0.0" prefWidth="181.739990234375" styleClass="col" text="Product Name" />
+                                          <TableColumn fx:id="pricecolSearch" prefWidth="110.73992919921875" styleClass="col" text="Price" />
+                                          <TableColumn fx:id="quantityColSearch" prefWidth="117.38507080078125" styleClass="col" text="Quantity" />
+                                          <TableColumn fx:id="sectionNameColsearch" prefWidth="195.06005859375" styleClass="col" text="Section Name" />
+                                          <TableColumn fx:id="DescriptionColsearch" prefWidth="335.5802001953125" styleClass="col" text="description" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="plusButton" layoutX="1129.0" layoutY="578.0" mnemonicParsing="false" onAction="#plusButtonFunction" prefHeight="56.0" prefWidth="58.0" styleClass="pink" text="+">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="quantityTextField" alignment="CENTER" layoutX="1129.0" layoutY="656.0" onAction="#quantityTextField" prefHeight="60.0" prefWidth="61.0" styleClass="SearchTextFields">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <Button fx:id="minusButton" layoutX="1131.0" layoutY="733.0" mnemonicParsing="false" onAction="#minusButtonFunction" prefHeight="56.0" prefWidth="58.0" styleClass="pink" text="-">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="deleteOrderItemButton" layoutX="1131.0" layoutY="811.0" mnemonicParsing="false" onAction="#deleteOrderItemFunction" prefHeight="56.0" prefWidth="58.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@UI/Delete.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab id="Products" text="Sections">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #EEEEEEFF;">
+                                 <children>
+                                    <TableView fx:id="sectionTableView" layoutX="113.0" layoutY="110.0" prefHeight="938.0" prefWidth="1324.0" styleClass="table" stylesheets="@stylesheet.css">
+                                       <columns>
+                                          <TableColumn fx:id="SectionNumberCol" prefWidth="119.5" styleClass="col" text="Sec Num" />
+                                          <TableColumn fx:id="sectionNameColSectionTable" minWidth="0.0" prefWidth="209.5" styleClass="col" text="Section Name" />
+                                          <TableColumn fx:id="sectionDescription" prefWidth="370.0" styleClass="col" text="Description" />
+                                          <TableColumn fx:id="managerIDCol" prefWidth="130.5" styleClass="col" text="ManagerID" />
+                                          <TableColumn fx:id="managerNameCol" prefWidth="278.5" styleClass="col" text="Manager Name" />
+                                          <TableColumn fx:id="managerStartDateCol" prefWidth="215.0" styleClass="col" text="Manager Start Date" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="showAllSections" layoutX="1245.0" layoutY="37.0" mnemonicParsing="false" onAction="#getAllSections" prefHeight="56.0" prefWidth="194.0" styleClass="pink" text="Show All">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="searchTextFieldSection" layoutX="114.0" layoutY="36.0" onAction="#searchSectionFunction" prefHeight="60.0" prefWidth="647.0" promptText="Search for Sections" styleClass="SearchTextFields">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <ChoiceBox fx:id="searchTypeSection" layoutX="767.0" layoutY="36.0" prefHeight="59.0" prefWidth="296.0" styleClass="searchType" />
+                                    <Polygon layoutX="1047.0" layoutY="6.0" mouseTransparent="true" points="-9.5, 54.0, 7.5, 54.0, -0.5, 64.0" stroke="BLACK" strokeType="INSIDE" />
+                                    <Button fx:id="searchButtonSection" layoutX="1069.0" layoutY="37.0" mnemonicParsing="false" onAction="#searchSectionFunction" prefHeight="56.0" prefWidth="171.0" styleClass="pink" text="Search">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="addSectionButton" layoutX="1459.0" layoutY="275.0" mnemonicParsing="false" onAction="#addSectionFunction" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="61.0" fitWidth="64.0" layoutX="50.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/plus.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="14.0" layoutY="77.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Add" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="viewSectionButton" layoutX="1459.0" layoutY="438.0" mnemonicParsing="false" onAction="#viewSectionFunction" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="65.0" fitWidth="68.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/view.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="12.0" layoutY="78.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="View" textAlignment="CENTER" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="editSectionButton" layoutX="1459.0" layoutY="604.0" mnemonicParsing="false" onAction="#editSectionFunction" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="61.0" fitWidth="64.0" layoutX="50.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/edit.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="13.0" layoutY="77.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Edit" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="deleteSectionButton" layoutX="1459.0" layoutY="761.0" mnemonicParsing="false" onAction="#deleteSectionFucntion" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="61.0" fitWidth="64.0" layoutX="50.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/Delete.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="12.0" layoutY="79.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Delete" textAlignment="CENTER" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="printSection" layoutX="1459.0" layoutY="110.0" mnemonicParsing="false" onAction="#printSection" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane fx:id="Save311" prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="60.0" fitWidth="65.0" layoutX="53.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/Print.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="51.0" layoutY="74.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Print" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="removeManagerButton" layoutX="1459.0" layoutY="921.0" mnemonicParsing="false" onAction="#removeManagerFunction" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="12.0" layoutY="8.0" prefHeight="108.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif; -fx-wrap-text: true;" text="Remove Manager" textAlignment="CENTER" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab id="Products" text="Product">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #EEEEEEFF;">
+                                 <children>
+                                    <TableView fx:id="productTable" layoutX="113.0" layoutY="110.0" prefHeight="938.0" prefWidth="1324.0" styleClass="table" stylesheets="@stylesheet.css">
+                                       <columns>
+                                          <TableColumn fx:id="productIDCol" prefWidth="161.57177734375" styleClass="col" text="Product ID" />
+                                          <TableColumn fx:id="productNameCol" minWidth="0.0" prefWidth="183.92822265625" styleClass="col" text="Product Name" />
+                                          <TableColumn fx:id="priceCol" prefWidth="110.342529296875" styleClass="col" text="Price" />
+                                          <TableColumn fx:id="quantityCol" prefWidth="118.0794677734375" styleClass="col" text="Quantity" />
+                                          <TableColumn fx:id="sectionNameCol" prefWidth="249.9205322265625" styleClass="col" text="Section Name" />
+                                          <TableColumn fx:id="descriptionCol" prefWidth="495.0" styleClass="col" text="description" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="showAllProducts" layoutX="1256.0" layoutY="37.0" mnemonicParsing="false" onAction="#getAllProducts" prefHeight="56.0" prefWidth="183.0" styleClass="pink" text="Show All">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="SearchTextField" layoutX="114.0" layoutY="36.0" onAction="#searchFunction" prefHeight="60.0" prefWidth="717.0" promptText="Search  for Proucts" styleClass="SearchTextFields">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <ChoiceBox fx:id="searchType" layoutX="838.0" layoutY="36.0" prefHeight="59.0" prefWidth="225.0" styleClass="searchType" />
+                                    <Polygon layoutX="1047.0" layoutY="6.0" mouseTransparent="true" points="-9.5, 54.0, 7.5, 54.0, -0.5, 64.0" stroke="BLACK" strokeType="INSIDE" />
+                                    <Button fx:id="searchButton" layoutX="1069.0" layoutY="37.0" mnemonicParsing="false" onAction="#searchFunction" prefHeight="56.0" prefWidth="182.0" styleClass="pink" text="Search">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="addProductButton" layoutX="1465.0" layoutY="360.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="61.0" fitWidth="64.0" layoutX="50.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/plus.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="14.0" layoutY="77.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Add" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="viewProdcutButton" layoutX="1465.0" layoutY="523.0" mnemonicParsing="false" onAction="#viewProductFunction" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="65.0" fitWidth="68.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/view.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="12.0" layoutY="78.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="View" textAlignment="CENTER" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="editProductButton" layoutX="1465.0" layoutY="689.0" mnemonicParsing="false" onAction="#editProductFunction" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="61.0" fitWidth="64.0" layoutX="50.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/edit.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="13.0" layoutY="77.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Edit" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="deleteProductButton" layoutX="1465.0" layoutY="846.0" mnemonicParsing="false" onAction="#deleteProductFunction" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="61.0" fitWidth="64.0" layoutX="50.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/Delete.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="12.0" layoutY="79.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Delete" textAlignment="CENTER" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="printProduct" layoutX="1465.0" layoutY="195.0" mnemonicParsing="false" onAction="#printProduct" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane fx:id="Save3" prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="60.0" fitWidth="65.0" layoutX="53.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/Print.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="51.0" layoutY="74.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Print" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab id="Products" text="employees">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #EEEEEEFF;">
+                                 <children>
+                                    <TableView fx:id="empTable" layoutX="113.0" layoutY="110.0" prefHeight="938.0" prefWidth="1324.0" styleClass="table" stylesheets="@stylesheet.css">
+                                       <columns>
+                                          <TableColumn fx:id="empIDCol" prefWidth="94.97244262695312" styleClass="col" text="EmpID" />
+                                          <TableColumn fx:id="empNameCol" minWidth="0.0" prefWidth="294.0" styleClass="col" text="Employee Name" />
+                                          <TableColumn fx:id="empGenderCol" prefWidth="89.0" styleClass="col" text="Gender" />
+                                          <TableColumn fx:id="empAgeCol" prefWidth="74.5" styleClass="col" text="Age" />
+                                          <TableColumn fx:id="empAddressCol" prefWidth="188.0" styleClass="col" text="Address" />
+                                          <TableColumn fx:id="empSectionCol" prefWidth="228.0" styleClass="col" text="Section Name" />
+                                          <TableColumn fx:id="empPhoneCol" prefWidth="185.0" styleClass="col" text="Phone" />
+                                          <TableColumn fx:id="IDCol" prefWidth="169.5" styleClass="col" text="ID" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="showAllEmps" layoutX="1245.0" layoutY="37.0" mnemonicParsing="false" onAction="#getAllEmps" prefHeight="56.0" prefWidth="194.0" styleClass="pink" text="Show All">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="searchTextFieldEmp" layoutX="114.0" layoutY="36.0" onAction="#searchEmpFunction" prefHeight="60.0" prefWidth="717.0" promptText="Search  for Employees" styleClass="SearchTextFields">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <ChoiceBox fx:id="searchTypeEmp" layoutX="838.0" layoutY="36.0" prefHeight="59.0" prefWidth="225.0" styleClass="searchType" />
+                                    <Polygon layoutX="1047.0" layoutY="6.0" mouseTransparent="true" points="-9.5, 54.0, 7.5, 54.0, -0.5, 64.0" stroke="BLACK" strokeType="INSIDE" />
+                                    <Button fx:id="searchButtonEmp" layoutX="1069.0" layoutY="37.0" mnemonicParsing="false" onAction="#searchEmpFunction" prefHeight="56.0" prefWidth="171.0" styleClass="pink" text="Search">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="addEmpButton" layoutX="1465.0" layoutY="360.0" mnemonicParsing="false" onAction="#addEmpFunction" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="61.0" fitWidth="64.0" layoutX="50.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/plus.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="14.0" layoutY="77.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Add" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="viewEmpButton" layoutX="1465.0" layoutY="523.0" mnemonicParsing="false" onAction="#viewEmpFunction" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="65.0" fitWidth="68.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/view.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="12.0" layoutY="78.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="View" textAlignment="CENTER" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="editEmpButton" layoutX="1465.0" layoutY="689.0" mnemonicParsing="false" onAction="#editEmpFunction" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="61.0" fitWidth="64.0" layoutX="50.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/edit.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="13.0" layoutY="77.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Edit" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="deleteEmpButton" layoutX="1465.0" layoutY="846.0" mnemonicParsing="false" onAction="#deleteEmpFucntion" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="61.0" fitWidth="64.0" layoutX="50.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/Delete.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="12.0" layoutY="79.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Delete" textAlignment="CENTER" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="employeeReport" layoutX="1465.0" layoutY="195.0" mnemonicParsing="false" onAction="#employeeReport" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane fx:id="Save31" prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="60.0" fitWidth="65.0" layoutX="53.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/Print.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="51.0" layoutY="74.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Print" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab id="Products" text="Suppliers">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #EEEEEEFF;">
+                                 <children>
+                                    <TableView fx:id="supplierTable" layoutX="113.0" layoutY="110.0" prefHeight="938.0" prefWidth="1324.0" styleClass="table" stylesheets="@stylesheet.css">
+                                       <columns>
+                                          <TableColumn fx:id="supplierIDCol" prefWidth="161.57177734375" styleClass="col" text="Supplier ID" />
+                                          <TableColumn fx:id="supplierNameCol" minWidth="0.0" prefWidth="308.0" styleClass="col" text="Supplier Name" />
+                                          <TableColumn fx:id="supplierPhoneCol" prefWidth="223.5" styleClass="col" text="Phone" />
+                                          <TableColumn fx:id="emailSupplierCol" prefWidth="294.5" styleClass="col" text="Email" />
+                                          <TableColumn fx:id="locationSupplierCol" prefWidth="335.0" styleClass="col" text="Location" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="showAllSuppliersButton" layoutX="1256.0" layoutY="37.0" mnemonicParsing="false" onAction="#showAllSuppliersFunction" prefHeight="56.0" prefWidth="183.0" styleClass="pink" text="Show All">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="searchSupplierTextField" layoutX="114.0" layoutY="36.0" onAction="#searchSupplierFunction" prefHeight="60.0" prefWidth="717.0" promptText="Search  for Supplier" styleClass="SearchTextFields">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <ChoiceBox fx:id="supplierSearchType" layoutX="838.0" layoutY="36.0" prefHeight="59.0" prefWidth="225.0" styleClass="searchType" />
+                                    <Polygon layoutX="1047.0" layoutY="6.0" mouseTransparent="true" points="-9.5, 54.0, 7.5, 54.0, -0.5, 64.0" stroke="BLACK" strokeType="INSIDE" />
+                                    <Button fx:id="searchSupplierButton" layoutX="1069.0" layoutY="37.0" mnemonicParsing="false" onAction="#searchSupplierFunction" prefHeight="56.0" prefWidth="182.0" styleClass="pink" text="Search">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="addSupplierButton" layoutX="1465.0" layoutY="360.0" mnemonicParsing="false" onAction="#addSupplierFunction" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="61.0" fitWidth="64.0" layoutX="50.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/plus.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="14.0" layoutY="77.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Add" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="viewSupplierButton" layoutX="1465.0" layoutY="523.0" mnemonicParsing="false" onAction="#viewSupplierFunction" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="65.0" fitWidth="68.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/view.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="12.0" layoutY="78.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="View" textAlignment="CENTER" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="editSupplierButton" layoutX="1465.0" layoutY="689.0" mnemonicParsing="false" onAction="#editSupplierFunction" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="61.0" fitWidth="64.0" layoutX="50.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/edit.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="13.0" layoutY="77.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Edit" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="deleteSupplierButton" layoutX="1465.0" layoutY="846.0" mnemonicParsing="false" onAction="#deleteSupplierFunction" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="61.0" fitWidth="64.0" layoutX="50.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/Delete.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="12.0" layoutY="79.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Delete" textAlignment="CENTER" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="printSupplier" layoutX="1465.0" layoutY="195.0" mnemonicParsing="false" onAction="#printSupplier" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane fx:id="Save32" prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="60.0" fitWidth="65.0" layoutX="53.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/Print.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="51.0" layoutY="74.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Print" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab id="Products" text="Customers">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #EEEEEEFF;">
+                                 <children>
+                                    <TableView fx:id="customerTable" layoutX="113.0" layoutY="110.0" prefHeight="938.0" prefWidth="1324.0" styleClass="table" stylesheets="@stylesheet.css">
+                                       <columns>
+                                          <TableColumn fx:id="customerIDCol" prefWidth="161.57177734375" styleClass="col" text="Customer ID" />
+                                          <TableColumn fx:id="customerNameCol" minWidth="0.0" prefWidth="365.06097412109375" styleClass="col" text="Customer Name" />
+                                          <TableColumn fx:id="phoneCustomerCol" prefWidth="243.61907958984375" styleClass="col" text="Phone" />
+                                          <TableColumn fx:id="customerAddressCol" prefWidth="329.880859375" styleClass="col" text="Address" />
+                                          <TableColumn fx:id="idNumberCol" prefWidth="221.5" styleClass="col" text="ID Number" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="showAllCustomersButton" layoutX="1256.0" layoutY="37.0" mnemonicParsing="false" onAction="#showAllCustomersFunction" prefHeight="56.0" prefWidth="183.0" styleClass="pink" text="Show All">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="searchCustomerTextField" layoutX="114.0" layoutY="36.0" onAction="#searchCustomerFunction" prefHeight="60.0" prefWidth="651.0" promptText="Search  for Customer" styleClass="SearchTextFields">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <ChoiceBox fx:id="searchCustomerType" layoutX="778.0" layoutY="36.0" prefHeight="59.0" prefWidth="285.0" styleClass="searchType" />
+                                    <Polygon layoutX="1047.0" layoutY="6.0" mouseTransparent="true" points="-9.5, 54.0, 7.5, 54.0, -0.5, 64.0" stroke="BLACK" strokeType="INSIDE" />
+                                    <Button fx:id="searchCustomerButton" layoutX="1069.0" layoutY="37.0" mnemonicParsing="false" onAction="#searchCustomerFunction" prefHeight="56.0" prefWidth="182.0" styleClass="pink" text="Search">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="addCustomerButton" layoutX="1465.0" layoutY="360.0" mnemonicParsing="false" onAction="#addCustomerFunction" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="61.0" fitWidth="64.0" layoutX="50.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/plus.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="14.0" layoutY="77.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Add" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="viewCustomerButton" layoutX="1465.0" layoutY="523.0" mnemonicParsing="false" onAction="#viewCustomerFunction" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="65.0" fitWidth="68.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/view.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="12.0" layoutY="78.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="View" textAlignment="CENTER" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="editCustomerButton" layoutX="1465.0" layoutY="689.0" mnemonicParsing="false" onAction="#editCustomerFunction" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="61.0" fitWidth="64.0" layoutX="50.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/edit.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="13.0" layoutY="77.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Edit" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="deleteCustomerButton" layoutX="1465.0" layoutY="846.0" mnemonicParsing="false" onAction="#deleteCustomerFunction" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="61.0" fitWidth="64.0" layoutX="50.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/Delete.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="12.0" layoutY="79.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Delete" textAlignment="CENTER" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="customerPrint" layoutX="1465.0" layoutY="195.0" mnemonicParsing="false" onAction="#customerPrint" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane fx:id="Save321" prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="60.0" fitWidth="65.0" layoutX="53.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/Print.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="51.0" layoutY="74.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Print" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab id="Products" text="Transactions">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #EEEEEEFF;">
+                                 <children>
+                                    <TableView fx:id="orderTableView" layoutX="113.0" layoutY="110.0" prefHeight="938.0" prefWidth="1324.0" styleClass="table" stylesheets="@stylesheet.css">
+                                       <columns>
+                                          <TableColumn fx:id="TransactionIDCol" prefWidth="118.8017578125" styleClass="col" text="#" />
+                                          <TableColumn fx:id="transactionDateCol" minWidth="0.0" prefWidth="155.26751708984375" styleClass="col" text="Date" />
+                                          <TableColumn fx:id="StatusCol" prefWidth="128.56121826171875" styleClass="col" text="Status" />
+                                          <TableColumn fx:id="typeCol" prefWidth="116.5594482421875" styleClass="col" text="Type" />
+                                          <TableColumn fx:id="discountOrderCol" prefWidth="125.7657470703125" styleClass="col" text="Discount" />
+                                          <TableColumn fx:id="totalCol" prefWidth="145.0594482421875" styleClass="col" text="Total" />
+                                          <TableColumn fx:id="employeeName" prefWidth="256.9405517578125" styleClass="col" text="Employee Name" />
+                                          <TableColumn fx:id="counterpartyNameCol" prefWidth="277.5" styleClass="col" text="Counterparty Name" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="showAllOrdersButton" layoutX="1256.0" layoutY="37.0" mnemonicParsing="false" onAction="#showAllOrdersFunction" prefHeight="56.0" prefWidth="183.0" styleClass="pink" text="Show All">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="searchOrderTextField" layoutX="114.0" layoutY="36.0" onAction="#searchOrderFunciton" prefHeight="60.0" prefWidth="946.0" promptText="Search  for Transaction" styleClass="SearchTextFields">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <Button fx:id="searchOrderButton" layoutX="1069.0" layoutY="37.0" mnemonicParsing="false" onAction="#searchOrderFunciton" prefHeight="56.0" prefWidth="182.0" styleClass="pink" text="Search">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="viewOrderButton" layoutX="1464.0" layoutY="488.0" mnemonicParsing="false" onAction="#viewOrderFunction" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="65.0" fitWidth="68.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/view.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="12.0" layoutY="78.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="View" textAlignment="CENTER" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="deleteOrderButton" layoutX="1466.0" layoutY="649.0" mnemonicParsing="false" onAction="#deleteOrder" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="61.0" fitWidth="64.0" layoutX="50.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/Delete.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="12.0" layoutY="79.0" prefHeight="37.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Delete" textAlignment="CENTER" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="printOrder" layoutX="1466.0" layoutY="329.0" mnemonicParsing="false" onAction="#printOrder" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane fx:id="Save3211" prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="60.0" fitWidth="65.0" layoutX="53.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@UI/Print.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="51.0" layoutY="74.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Print" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="payButton" layoutX="1464.0" layoutY="800.0" mnemonicParsing="false" onAction="#payFunction" prefHeight="118.0" prefWidth="160.0" styleClass="pink">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="12.0" layoutY="7.0" prefHeight="114.0" prefWidth="137.0" style="-fx-text-fill: white; -fx-font-size: 30px; -fx-font-family: sans-serif;" text="Pay" textAlignment="CENTER" />
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+                  <AnchorPane fx:id="leftMenu" layoutX="1.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <VBox fx:id="vbox" prefHeight="1014.0" prefWidth="325.0">
+                           <children>
+                              <AnchorPane prefHeight="246.0" prefWidth="308.0">
+                                 <children>
+                                    <Label fx:id="empName" alignment="CENTER" layoutY="142.0" prefHeight="39.0" prefWidth="325.0" text="Employee Name" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Black" size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="empMail" alignment="CENTER" layoutX="-1.0" layoutY="175.0" prefHeight="39.0" prefWidth="327.0" text="employeeName@gmail.com" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="106.0" fitWidth="118.0" layoutX="100.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@UI/userIcon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="dashboard" onMousePressed="#leftTabs" prefHeight="65.0" prefWidth="307.0" styleClass="SideBar">
+                                 <children>
+                                    <ImageView fitHeight="51.0" fitWidth="52.0" layoutX="24.0" layoutY="6.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@UI/Chart.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="85.0" layoutY="12.0" mouseTransparent="true" styleClass="SideBarTxt" text="Dashboard" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="home" onMousePressed="#leftTabs" prefHeight="65.0" prefWidth="307.0" styleClass="SideBar">
+                                 <children>
+                                    <ImageView fitHeight="49.0" fitWidth="48.0" layoutX="24.0" layoutY="6.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@UI/Home_icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="84.0" layoutY="12.0" mouseTransparent="true" styleClass="SideBarTxt" text="Home" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="departments" onMousePressed="#leftTabs" prefHeight="65.0" prefWidth="307.0" styleClass="SideBar">
+                                 <children>
+                                    <ImageView fitHeight="44.0" fitWidth="44.0" layoutX="24.0" layoutY="12.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@UI/Dep_logo.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="84.0" layoutY="12.0" mouseTransparent="true" styleClass="SideBarTxt" text="Sections" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="products" onMousePressed="#leftTabs" prefHeight="65.0" prefWidth="307.0" styleClass="SideBar">
+                                 <children>
+                                    <ImageView fitHeight="44.0" fitWidth="44.0" layoutX="24.0" layoutY="12.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@UI/ProductsLogo.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="84.0" layoutY="12.0" mouseTransparent="true" styleClass="SideBarTxt" text="Products" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="employees" onMousePressed="#leftTabs" prefHeight="65.0" prefWidth="307.0" styleClass="SideBar">
+                                 <children>
+                                    <ImageView fitHeight="44.0" fitWidth="44.0" layoutX="24.0" layoutY="12.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@UI/employees_logo.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="84.0" layoutY="12.0" mouseTransparent="true" styleClass="SideBarTxt" text="Employees" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="suppliers" onMousePressed="#leftTabs" prefHeight="65.0" prefWidth="307.0" styleClass="SideBar">
+                                 <children>
+                                    <ImageView fitHeight="49.0" fitWidth="48.0" layoutX="24.0" layoutY="6.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@UI/Supplier_Icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="84.0" layoutY="12.0" mouseTransparent="true" styleClass="SideBarTxt" text="Suppliers" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="customers" onMousePressed="#leftTabs" prefHeight="65.0" prefWidth="307.0" styleClass="SideBar">
+                                 <children>
+                                    <ImageView fitHeight="59.0" fitWidth="57.0" layoutX="18.0" layoutY="3.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@UI/customer.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="84.0" layoutY="12.0" mouseTransparent="true" styleClass="SideBarTxt" text="Customers" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="transactions" onMousePressed="#leftTabs" prefHeight="65.0" prefWidth="307.0" styleClass="SideBar">
+                                 <children>
+                                    <ImageView fitHeight="40.0" fitWidth="42.0" layoutX="24.0" layoutY="10.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@UI/Transactions.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="84.0" layoutY="12.0" mouseTransparent="true" styleClass="SideBarTxt" text="Transactions" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                        <AnchorPane fx:id="logout" layoutX="1.0" layoutY="1014.0" onMouseClicked="#logoutHome" prefHeight="67.0" prefWidth="324.0" styleClass="SideBar">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="42.0" layoutX="24.0" layoutY="10.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@UI/Logout.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="84.0" layoutY="12.0" mouseTransparent="true" styleClass="SideBarTxt" text="Logout" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="32.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <AnchorPane fx:id="homeOverlay" prefHeight="1091.0" prefWidth="1926.0" styleClass="overlay" visible="false" />
+   </children>
+</AnchorPane>

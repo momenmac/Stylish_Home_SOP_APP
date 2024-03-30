@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    -fx-start-margin: 0;
+    -fx-padding: 0;
+    -fx-font-family: 'Poppins', sans-serif;
+
+}
+#mainPanel{
+   -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-opacity: 100%;
+}
+#passwordTextField{
+
+}
+#loginLabel{
+   -fx-text-fill: #4a4a4a;
+    -fx-font-size: 50;
+}
+#loginPanel{
+    -fx-background-color: #fffdfd;
+}
+#usernameTextField{
+    -fx-background-radius: 40px;
+    -fx-background-color: transparent;
+    -fx-border-color: #888888;
+    -fx-border-radius: 40px;
+    -fx-font-size:39px ;
+    -fx-text-fill: black;
+    -fx-padding: 5 30 5 30;
+}
+#usernameLabel{
+    -fx-text-fill: #797979;
+}
+#passwordLabel{
+    -fx-text-fill: #797979;
+}
+#MyRec{
+    -fx-border-color: yellow;
+    -fx-border-radius: 40px;
+    -fx-background-color: #6e1569;
+}
+#passwordTextField{
+    -fx-background-radius: 40px;
+    -fx-background-color: transparent;
+    -fx-border-color: #888888;
+    -fx-border-radius: 40px;
+    -fx-font-size:39px ;
+    -fx-text-fill: black;
+    -fx-padding: 5 30 5 30;
+}
+#forgotPasswordLabel{
+    -fx-text-fill:linear-gradient(to left, #d12e7e, #6e1569) ;
+    -fx-font-size: 30px;
+
+}
+#forgotPasswordLabel:hover{
+    -fx-underline: true;
+    -fx-font-size: 31px;
+}
+#loginButton{
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #d12e7e, #6e1569);
+    -fx-background-radius: 40px;
+    -fx-text-fill: white;
+    -fx-font-size: 39px;
+
+}
+#loginButton:hover{
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #811e50, #490e45);
+    -fx-background-radius: 40px;
+    -fx-text-fill: white;
+    -fx-font-size: 39px;
+
+}
+
+#text{
+    -fx-wrap-text: true;
+    -fx-white-space: pre-wrap;
+}
+#backgroundImage{
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #d12e7e, #6e1569);
+    -fx-opacity: 80%;
+}
+#testPane{
+    -fx-background-color: black;
+    -fx-animated: animate 6s linear infinte;
+}
+.focused-text-field{
+    -fx-background-color: #FFFDFDFF;
+    -fx-border-color: #FFFDFDFF ;
+    -fx-border-width: 2px;
+}
+
+.progress-bar > .track {
+    -fx-background-radius: 50; /* Set the radius to create rounded corners */
+    -fx-background-color: rgba(0, 0, 0, 0.44);
+    -fx-padding: 0;
+}
+
+.progress-bar > .bar {
+    -fx-background-radius: 50; /* Match the same radius for the filled part */
+    -fx-padding: 0;
+    -fx-background-color: linear-gradient(to right, #d12e7e, #6e1569);
+}
+#leftMenu{
+    -fx-background-color: linear-gradient( #d12e7e, #6e1569);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 3, 2);
+    -fx-background-radius: 0 65 0 0; /* Top-right corner radius */
+
+}
+.SideBar{
+    -fx-background-color: transparent;
+}
+.SideBarTxt{
+    -fx-font-family: sans-serif;
+
+}
+.SideBar:hover{
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.51));
+    -fx-font-family: sans-serif;
+    -fx-font-size: 32px;
+
+}
+.clicked{
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.51));
+    -fx-font-family: sans-serif;
+    -fx-font-size: 32px;
+    -fx-border-style: solid;
+    -fx-border-color: #ffd800;
+    -fx-border-width: 0 0 0 7px;
+}
+
+.gradient-border-pane {
+-fx-background-color: linear-gradient(to right, #d12e7e, #6e1569);
+}
+
+#JTitle{
+    -fx-text-fill:linear-gradient(to left, #d12e7e, #6e1569) ;
+    -fx-font-size: 50px;
+}
+.gradient-border-button {
+    -fx-background-color: white; /* Background gradient */
+    -fx-background-radius: 22; /* Rounded corners, adjust as needed */
+    -fx-padding: 12px 12px;
+    -fx-text-fill: linear-gradient(to left, #d12e7e, #6e1569) ; /* Text color */
+    -fx-font-size: 17px; /* Font size */
+    -fx-border-width: 3; /* Gradient border width */
+    -fx-border-color: linear-gradient(to left, #d12e7e, #6e1569); /* Set gradient border color to transparent */
+    -fx-border-style: solid;
+    -fx-border-radius: 20;
+}
+.gradient-border-button2 {
+    -fx-background-color: linear-gradient(to left, #d12e7e, #6e1569) ;
+    -fx-background-radius: 22;
+    -fx-padding: 12px 12px;
+    -fx-text-fill: white;
+    -fx-font-size: 17px;
+    -fx-border-radius: 20;
+}
+#JText{
+    -fx-wrap-text: true;
+    -fx-white-space: pre-wrap;
+}
+.gradient-border-button2:hover{
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #811e50, #490e45);
+    -fx-text-fill: white;
+    -fx-font-size: 17px;
+}
+.gradient-border-button:hover{
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, rgba(129, 30, 80, 0.07), rgba(73, 14, 69, 0.18));
+    -fx-text-fill: linear-gradient(to left, #c4166e, #6e1569) ; /* Text color */
+    -fx-font-size: 17px;
+}
+#loginButtonClicked{
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #811e50, #490e45);
+    -fx-background-radius: 40px;
+    -fx-text-fill: white;
+    -fx-font-size: 39px;
+}
+#top{
+
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 2, 2);
+
+}
+#tabs{
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, -10, 2);
+
+}
+#chosenTab{
+    -fx-font-family: sans-serif;
+    -fx-font-size: 37px;
+    -fx-text-fill: #737373;
+}
+.pink{
+    -fx-background-color: #C4166EFF ;
+    -fx-text-fill: white;
+    -fx-font-size: 19;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+    -fx-background-radius: 16 16 16 16; /* Top-right corner radius */
+
+}
+#overlay{
+    -fx-background-color: rgba(0, 0, 0, 0.48);
+}
+
+
+.table-row-cell:odd {
+    -fx-background-color: rgba(196, 22, 110, 0.11);
+    /*-fx-background-radius: 20px;*/
+    /*-fx-border-color: #000000;*/
+    /*-fx-border-width: 0.1px;*/
+}
+.table-row-cell:even{
+    -fx-background-color: rgb(255, 255, 255);
+    /*-fx-background-radius: 20px;*/
+    /*-fx-border-color: #000000;*/
+    /*-fx-border-width: 0.1px;*/
+}
+.table-cell{
+    -fx-padding: 2 2 2 10 px;
+    -fx-font-size: 18;
+    -fx-border-color: #000000;
+    -fx-border-width: 0.1px;
+
+}
+.table-view .column-header{
+    -fx-background-color: #C4166EFF;
+    -fx-padding: 2 5 2 5 px;
+    -fx-background-radius: 20 20 0 0px;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+.table-row-cell:selected {
+    -fx-background-color: #C4166EFF; /* Change to your desired color */
+}
+
+.table-view{
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-border-color: transparent;
+}
+.table-view .column-header .label {
+    -fx-text-fill: #ffffff; /* Change to your desired text color */
+}
+.table-view .column-header-background{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+#exit:hover{
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #811e50, #490e45);
+    -fx-background-radius: 40px;
+}
+#exit{
+    -fx-background-radius: 40px;
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #d12e7e, #6e1569);
+
+}
+
+/*.searchType .list-view {*/
+/*    -fx-background-color: white; !* Background color of the dropdown *!*/
+/*    -fx-selection-bar: pink; !* Color of the selected item *!*/
+/*}*/
+/* ChoiceBox (excluding the dropdown list) */
+/* ChoiceBox (excluding the dropdown list) */
+.searchType {
+    -fx-background-color: white;
+    -fx-background-radius: 16px;
+    -fx-border-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #d12e7e, #6e1569);
+    -fx-border-radius: 16px;
+    -fx-padding: 5 30 5 10; /* Adjust padding for text and arrow */
+    -fx-text-fill: white; /* Text color for ChoiceBox */
+    -fx-font-size: 18px;
+}
+
+
+/* Dropdown list */
+.searchType .list-view {
+    -fx-background-color: white; /* Background color of the dropdown */
+    -fx-padding: 0 0 0 10;
+
+}
+.searchType .list-cell {
+    -fx-text-fill: black; /* Color of the text in the dropdown */
+    -fx-padding: 0 0 0 10;
+}
+.searchType:focused {
+    -fx-border-color: #6e1569; /* Border color when ChoiceBox is focused */
+    -fx-border-width: 1; /* Border width */
+    -fx-border-radius: 16px; /* Border corner radius */
+}
+.pink:hover{
+    -fx-background-color: #830e4a;
+    -fx-text-fill: white;
+    -fx-font-size: 19;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+    -fx-background-radius: 16 16 16 16; /* Top-right corner radius */
+
+}
+.yellowBorder{
+    -fx-background-color: #830e4a;
+    -fx-text-fill: white;
+    -fx-font-size: 19;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+    -fx-background-radius: 16 16 16 16; /* Top-right corner radius */
+    -fx-border-radius: 16;
+    -fx-border-color: #FFD800FF ;
+    -fx-border-width: 2px;
+}
+.SearchTextFields{
+    -fx-background-radius: 16px;
+    -fx-border-radius: 16px;
+    -fx-border-color:  linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #d12e7e, #6e1569);
+    -fx-padding:  0 0 0 16 px;
+    -fx-font-size: 20px;
+
+}
+.SearchTextFields:focused{
+    -fx-background-radius: 16px;
+    -fx-border-radius: 16px;
+    -fx-border-color:  #6e1569;
+    -fx-padding:  0 0 0 16 px;
+}
+.overlay{
+    -fx-background-color: rgba(0, 0, 0, 0.48);
+}
+.background-style {
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+.addOrViewTitle{
+    -fx-text-fill:linear-gradient(to left, #d12e7e, #6e1569) ;
+    -fx-font-size: 55px;
+}
+.labelsInAddOrView{
+    -fx-font-size: 20px;
+    -fx-font-family: sans-serif;
+}
+#addImageText{
+    -fx-wrap-text: true;
+    -fx-white-space: pre-wrap;
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+}
+.addOrViewTextField{
+    -fx-border-radius: 17px;
+    -fx-background-radius: 17px;
+    -fx-border-color: linear-gradient(to left, #d12e7e, #6e1569) ;
+    -fx-background-color: white;
+    -fx-padding: 10 5 5 10;
+    -fx-font-size: 20px;
+}
+.addOrViewTextField{
+    -fx-padding: 5 5 5 10;
+    -fx-font-size: 20px;
+}
+.addOrViewTextFieldDisabled{
+    -fx-border-radius: 17px;
+    -fx-background-radius: 17px;
+    -fx-border-color: linear-gradient(to left, #d12e7e, #6e1569) ;
+    -fx-background-color: transparent;
+    -fx-padding: 5 5 5 10;
+    -fx-font-size: 20px;
+}
+
+
+
+.SectionList{
+-fx-border-color: linear-gradient(to left, #d12e7e, #6e1569);
+}
+.SectionList .list-cell:selected {
+    -fx-background: #d12e7e;
+    -fx-background-color: #d12e7e;
+    -fx-text-fill: white;
+}
+
+.SectionList .list-cell {
+    -fx-font-size: 20px;
+    -fx-background-color: rgba(196, 22, 110, 0.11);
+    -fx-text-fill: black;
+    -fx-padding: 2 2 2 10;
+}
+
+.SectionList .list-cell:odd {
+    -fx-background-color: white;
+}
+
+.SectionList .list-cell:selected:odd {
+    -fx-background-color: #d12e7e;
+}
+
+#empName{
+    -fx-font-family: sans-serif;
+    -fx-font-size: 26;
+    -fx-font-weight: bold;
+}
+.date-picker .arrow-button {
+    -fx-padding: 3px; /* Adjust padding around the arrow buttons */
+    /* You might also need to set a fixed width and height for the arrow buttons */
+    -fx-min-width: 10px;
+    -fx-min-height: 10px;
+}
+
+/* To address arrow visibility issues */
+.date-picker .arrow-button .right-arrow-button,
+.date-picker .arrow-button .left-arrow-button {
+    -fx-background-color: black; /* Set a color for the arrows for visibility */
+}
+
+#rightMenu{
+    -fx-background-color: linear-gradient( #d12e7e, #6e1569);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 3);
+    -fx-background-radius: 65 0 0 0px; /* Top-right corner radius */
+
+}
+#topMenu{
+    -fx-background-color: #ececec;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 3);
+    -fx-background-radius: 0 0 65 65px; /* Top-right corner radius */
+
+}
+
+#dateAndTime{
+    -fx-text-fill: #7c7c7c;
+    -fx-font-size: 40px;
+}
+.orderNumberText{
+    -fx-text-fill: white;
+    -fx-font-size: 35px;
+}
+
+.yellow{
+    -fx-background-color: #FFD800FF ;
+    -fx-text-fill: black;
+    -fx-font-size: 19;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+    -fx-background-radius: 16 16 16 16; /* Top-right corner radius */
+
+}
+
+.yellow:hover{
+    -fx-background-color: #af9300;
+    -fx-text-fill: black;
+    -fx-font-size: 19;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+    -fx-background-radius: 16 16 16 16; /* Top-right corner radius */
+
+}
+
+.discount{
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+.total{
+    -fx-text-fill: white;
+    -fx-font-size: 27px;
+}
+
+.rightScrollPane{
+    -fx-background-color: transparent;
+    -fx-border-width: 2 0 2 0;
+    -fx-border-color: #FFD800FF;
+}
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+.labels{
+    -fx-text-fill: black;
+    -fx-font-size: 25px;
+}
+
+
+.yellowTable .column-header{
+    -fx-background-color: #FFD800FF;
+    -fx-padding: 2 5 2 5 px;
+    -fx-background-radius: 20 20 0 0px;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+.yellowTable .column-header .label {
+    -fx-text-fill: black;
+}
+
+.yellowTable .table-row-cell:odd {
+    -fx-background-color: #fff6c5;
+}
+.yellowTable .table-row-cell:selected {
+    -fx-background-color: #FFD800FF;
+}
+
+#plusButton{
+    -fx-text-fill: white;
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+
+}
+#minusButton{
+    -fx-text-fill: white;
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+}
+
+#quantityTextField{
+    -fx-padding:  5 5 5 5 px;
+}
+
+.Reports{
+    -fx-background-color: #C4166EFF ;
+    -fx-text-fill: white;
+    -fx-font-size: 19;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+    -fx-background-radius: 50 0 50 0px; /* Top-right corner radius */
+
+}
+
+.Reports:hover{
+    -fx-background-color: #800241;
+    -fx-text-fill: white;
+    -fx-font-size: 19;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+    -fx-background-radius: 50 0 50 0px; /* Top-right corner radius */
+}
+
+/* Line style */
+.chart-series-line {
+    -fx-stroke: #6e1569; /* Red color */
+}
+
+/* X-axis style */
+.chart-axis {
+    -fx-stroke:  #6e1569; /* Green color */
+}
+
+/* Y-axis style */
+.chart-axis-label {
+    -fx-text-fill:  #d12e7e; /* Blue color */
+}

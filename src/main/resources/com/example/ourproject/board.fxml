@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #000000;" stylesheets="@Design.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.testfx.BoardController">
+   <children>
+      <AnchorPane prefHeight="700.0" prefWidth="204.0">
+         <children>
+            <VBox prefHeight="526.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane fx:id="logoPane" prefHeight="108.0" prefWidth="200.0" styleClass="leftMenu">
+                     <children>
+                        <ImageView fitHeight="87.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/logo-header.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="roomsPane" prefHeight="33.0" prefWidth="200.0" styleClass="leftMenu">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="200.0" text="ROOMS &amp; SUITS" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="resturantPane" prefHeight="33.0" prefWidth="200.0" styleClass="leftMenu">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="200.0" text="02 RESTURANT" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="culinaryPane" prefHeight="33.0" prefWidth="200.0" styleClass="leftMenu">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="200.0" text="CULINARY" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="wellnessPane" prefHeight="33.0" prefWidth="200.0" styleClass="leftMenu">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="200.0" text="WELLNESS" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="eventsPane" layoutX="10.0" layoutY="180.0" prefHeight="33.0" prefWidth="200.0" styleClass="leftMenu">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="200.0" text="EVENTS" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="facilityPane" layoutX="10.0" layoutY="217.0" prefHeight="33.0" prefWidth="200.0" styleClass="leftMenu">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="200.0" text="FACILITIES" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="254.0" prefHeight="33.0" prefWidth="200.0" styleClass="leftMenu" fx:id="xpPane">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="200.0" text="THE EXPERIENCE" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="gallareyPane" layoutX="10.0" layoutY="291.0" prefHeight="33.0" prefWidth="200.0" styleClass="leftMenu">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="200.0" text="GALLERY" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="offerPane" layoutX="10.0" layoutY="328.0" prefHeight="33.0" prefWidth="200.0" styleClass="leftMenu">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="200.0" text="OFFERS" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="booknowPane" layoutX="10.0" layoutY="365.0" prefHeight="33.0" prefWidth="200.0" styleClass="leftMenu">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="46.0" prefWidth="200.0" text="BOOK NOW" textFill="#d4af37">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <AnchorPane fx:id="logoutPane" layoutY="649.0" prefHeight="33.0" prefWidth="200.0" styleClass="leftMenu">
+               <children>
+                  <Label alignment="CENTER" prefHeight="37.0" prefWidth="200.0" text="Logout" textFill="#00ffd7">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="adminPane" layoutY="534.0" prefHeight="33.0" prefWidth="200.0" styleClass="leftMenu">
+               <children>
+                  <Label alignment="CENTER" prefHeight="37.0" prefWidth="200.0" text="ADMIN" textFill="#d700ff">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="207.0" layoutY="-25.0" prefHeight="727.0" prefWidth="1002.0">
+         <children>
+            <TabPane fx:id="tabbedPane" layoutY="-28.0" prefHeight="755.0" prefWidth="1003.0" style="-fx-background-color: #046307;" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab style="-fx-background-color: transparent;" text="Home">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="704.0" prefWidth="1037.0" />
+                  </content>
+                </Tab>
+                  <Tab style="-fx-background-color: transparent;" text="rooms">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+                  <Tab style="-fx-background-color: transparent;" text="resturant">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+                <Tab style="-fx-background-color: transparent;" text="culinary">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+                  <Tab style="-fx-background-color: transparent;" text="wellness">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+                  <Tab style="-fx-background-color: transparent;" text="events">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+                  <Tab style="-fx-background-color: transparent;" text="facilities">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+                  <Tab style="-fx-background-color: transparent;" text="the experience">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+                  <Tab style="-fx-background-color: transparent;" text="gallary">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+                  <Tab style="-fx-background-color: transparent;" text="offers">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+                  <Tab style="-fx-background-color: transparent;" text="booknow">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+                  <Tab style="-fx-background-color: transparent;" text="ADMIN">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: transparent;">
+                           <children>
+                              <TabPane fx:id="adminTabPane" layoutX="2.0" layoutY="25.0" prefHeight="700.0" prefWidth="1003.0" tabClosingPolicy="UNAVAILABLE" tabMinHeight="40.0" tabMinWidth="60.0">
+                                 <tabs>
+                                    <Tab fx:id="tabAdmin" style="-fx-background: transparency;" styleClass="admin" text="Employees">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <AnchorPane layoutX="-1.0" prefHeight="87.0" prefWidth="1003.0" style="-fx-background-color: #C0C0C0;">
+                                                   <children>
+                                                      <AnchorPane layoutX="541.0" layoutY="18.0" prefHeight="62.0" prefWidth="449.0">
+                                                         <children>
+                                                            <TextField layoutY="15.0" prefHeight="28.0" prefWidth="239.0" promptText="Employee's ID . . ." />
+                                                            <ChoiceBox fx:id="checkTables" layoutX="248.0" layoutY="15.0" prefHeight="27.0" prefWidth="150.0" />
+                                                            <Button layoutX="398.0" layoutY="6.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="37.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@images/search.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <HBox layoutX="124.0" prefHeight="98.0" prefWidth="391.0">
+                                                         <children>
+                                                            <Button maxHeight="98.0" maxWidth="98.0" minHeight="98.0" minWidth="90.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="98.0" style="-fx-background-color: transparent;">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="98.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@images/adduser.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                            <Button maxHeight="98.0" maxWidth="98.0" minHeight="98.0" minWidth="90.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="98.0" style="-fx-background-color: transparent;">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="98.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@images/edituser.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                            <Button maxHeight="98.0" maxWidth="98.0" minHeight="98.0" minWidth="90.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="98.0" style="-fx-background-color: transparent;">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="98.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@images/deletesuser.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                            <Button maxHeight="98.0" maxWidth="98.0" minHeight="98.0" minWidth="90.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="98.0" style="-fx-background-color: transparent;">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="98.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@images/report.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                         </children>
+                                                      </HBox>
+                                                      <Label fx:id="controlPanel" layoutX="7.0" layoutY="4.0" prefHeight="89.0" prefWidth="108.0" text="Control Panel">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <effect>
+                                                            <Lighting bumpInput="$null">
+                                                               <light>
+                                                                  <Light.Distant>
+                                                                     <color>
+                                                                        <Color red="0.9524074196815491" green="1.0" blue="0.04814814776182175" />
+                                                                     </color>
+                                                                  </Light.Distant>
+                                                               </light>
+                                                            </Lighting>
+                                                         </effect>
+                                                      </Label>
+                                                   </children></AnchorPane>
+                                                <AnchorPane layoutX="2.0" layoutY="100.0" prefHeight="481.0" prefWidth="998.0">
+                                                   <children>
+                                                      <TableView layoutX="-6.0" layoutY="-2.0" prefHeight="526.0" prefWidth="1003.0">
+                                                        <columns>
+                                                          <TableColumn prefWidth="75.0" text="C1" />
+                                                          <TableColumn prefWidth="75.0" text="C2" />
+                                                        </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab style="-fx-background: transparency;" styleClass="admin" text="Customers" />
+                                 </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+               <effect>
+                  <Blend />
+               </effect>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

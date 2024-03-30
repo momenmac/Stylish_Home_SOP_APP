@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="757.0" style="-fx-border-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #d12e7e, #6e1569); -fx-border-width: 5px;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ourproject.SectionStage">
+   <children>
+      <Label fx:id="title" alignment="CENTER" layoutX="-5.0" layoutY="14.0" prefHeight="67.0" prefWidth="764.0" styleClass="addOrViewTitle" text="Add Section" textAlignment="CENTER" />
+      <VBox layoutX="63.0" layoutY="117.0" prefHeight="447.0" prefWidth="673.0">
+         <children>
+            <HBox prefHeight="54.0" prefWidth="611.0">
+               <children>
+                  <Label prefHeight="54.0" prefWidth="209.0" styleClass="labelsInAddOrView" text="Section Name" />
+                  <AnchorPane prefHeight="54.0" prefWidth="394.0">
+                     <children>
+                        <TextField fx:id="SectionName" layoutX="9.0" layoutY="7.0" prefHeight="45.0" prefWidth="376.0" styleClass="addOrViewTextField" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="54.0" prefWidth="611.0">
+               <children>
+                  <Label prefHeight="54.0" prefWidth="209.0" styleClass="labelsInAddOrView" text="Section Description" />
+                  <AnchorPane prefHeight="54.0" prefWidth="394.0">
+                     <children>
+                        <TextField fx:id="SectionDescription" layoutX="9.0" layoutY="7.0" prefHeight="45.0" prefWidth="376.0" promptText="Enter a brief description" styleClass="addOrViewTextField" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="54.0" prefWidth="611.0">
+               <children>
+                  <Label prefHeight="52.0" prefWidth="204.0" styleClass="labelsInAddOrView" text="Manager Start Date" />
+                  <AnchorPane prefHeight="54.0" prefWidth="394.0">
+                     <children>
+                        <TextField fx:id="Day" layoutX="14.0" layoutY="4.0" prefHeight="45.0" prefWidth="89.0" promptText="DD" styleClass="addOrViewTextField" />
+                        <TextField fx:id="Month" layoutX="117.0" layoutY="4.0" prefHeight="45.0" prefWidth="89.0" promptText="MM" styleClass="addOrViewTextField" />
+                        <TextField fx:id="Year" layoutX="215.0" layoutY="4.0" prefHeight="45.0" prefWidth="177.0" promptText="YYYY" styleClass="addOrViewTextField" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="54.0" prefWidth="611.0">
+               <children>
+                  <Label prefHeight="53.0" prefWidth="202.0" styleClass="labelsInAddOrView" text="Manager ID" />
+                  <AnchorPane prefHeight="54.0" prefWidth="394.0">
+                     <children>
+                        <TextField fx:id="ManagerID" layoutX="14.0" layoutY="4.0" prefHeight="45.0" prefWidth="202.0" styleClass="addOrViewTextField" />
+                        <Button fx:id="checkButton" layoutX="238.0" layoutY="3.0" mnemonicParsing="false" onAction="#check" prefHeight="35.0" prefWidth="151.0" styleClass="gradient-border-button2" text="Check" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="56.0" prefWidth="617.0">
+               <children>
+                  <Label prefHeight="53.0" prefWidth="202.0" styleClass="labelsInAddOrView" text="Manager Name" />
+                  <AnchorPane prefHeight="103.0" prefWidth="394.0">
+                     <children>
+                        <TextField fx:id="ManagerName" layoutX="14.0" layoutY="4.0" prefHeight="45.0" prefWidth="376.0" promptText="click on check  to show the Name" styleClass="addOrViewTextField" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="226.0" prefHeight="55.0" prefWidth="673.0">
+               <children>
+                  <Label prefHeight="53.0" prefWidth="202.0" styleClass="labelsInAddOrView" text="Section Number" />
+                  <AnchorPane prefHeight="103.0" prefWidth="394.0">
+                     <children>
+                        <TextField fx:id="SectionNumber" alignment="CENTER" editable="false" layoutX="14.0" layoutY="6.0" prefHeight="45.0" prefWidth="161.0" style="-fx-background-color: transparent; -fx-padding: 5 10 5 10 px;" styleClass="addOrViewTextField" text="1" />
+                     </children></AnchorPane>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="282.0" prefHeight="64.0" prefWidth="617.0">
+               <children>
+                  <Label prefHeight="53.0" prefWidth="202.0" styleClass="labelsInAddOrView" text="Employees count" />
+                  <AnchorPane prefHeight="103.0" prefWidth="394.0">
+                     <children>
+                        <TextField fx:id="employeesCount" alignment="CENTER" editable="false" layoutX="14.0" layoutY="6.0" prefHeight="45.0" prefWidth="161.0" style="-fx-background-color: transparent; -fx-padding: 5 10 5 10 px;" styleClass="addOrViewTextField" text="0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <Label fx:id="note" prefHeight="19.0" prefWidth="678.0" style="-fx-text-fill: #a8a8a8; -fx-font-size: 15 px;" text="* Promoting an employee as manager updates their old section." textFill="#a8a8a8" />
+         </children></VBox>
+      <Button fx:id="cancelButton" layoutX="415.0" layoutY="570.0" mnemonicParsing="false" onAction="#cancelClicked" prefHeight="51.0" prefWidth="200.0" styleClass="gradient-border-button" text="cancel" />
+      <Button fx:id="addButton" layoutX="184.0" layoutY="570.0" mnemonicParsing="false" onAction="#addClicked" prefHeight="51.0" prefWidth="200.0" styleClass="gradient-border-button2" text="Add" />
+      <Button fx:id="okButton" layoutX="291.0" layoutY="570.0" mnemonicParsing="false" onAction="#okClicked" prefHeight="51.0" prefWidth="200.0" styleClass="gradient-border-button2" text="OK" />
+      <AnchorPane fx:id="addProductOverlay" prefHeight="700.0" prefWidth="757.0" styleClass="overlay" visible="false" />
+   </children>
+</AnchorPane>

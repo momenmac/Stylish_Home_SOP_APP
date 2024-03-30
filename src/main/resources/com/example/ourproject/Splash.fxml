@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ourproject.Splash">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="600.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@UI/img.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="WAIT" />
+         </cursor></ImageView>
+      <ProgressBar fx:id="loading" layoutX="37.0" layoutY="337.0" prefHeight="31.0" prefWidth="527.0" progress="0.55" stylesheets="@stylesheet.css" />
+   </children>
+   <cursor>
+      <Cursor fx:constant="WAIT" />
+   </cursor>
+</AnchorPane>

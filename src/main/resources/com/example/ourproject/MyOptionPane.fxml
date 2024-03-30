@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="273.0" prefWidth="781.0" styleClass="gradient-border-pane" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ourproject.MyOptionPane">
+   <children>
+      <AnchorPane layoutX="9.0" layoutY="8.0" prefHeight="257.0" prefWidth="765.0" style="-fx-background-color: white;">
+         <children>
+            <Label fx:id="JTitle" layoutX="123.0" layoutY="36.0" text="Error" />
+            <ImageView fx:id="JIcon" fitHeight="80.0" fitWidth="100.0" layoutX="24.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@UI/logo1.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="JText" alignment="CENTER" layoutX="23.0" layoutY="94.0" prefHeight="107.0" prefWidth="725.0" text="Stylish Home for Furniture: Redefining elegance. Discover modern sophistication and timeless charm in every piece. " textAlignment="CENTER" textFill="#808080">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Button fx:id="yesButton" layoutX="255.0" layoutY="193.0" mnemonicParsing="false" onAction="#yesFunction" prefHeight="48.0" prefWidth="99.0" styleClass="gradient-border-button2" text="Yes" />
+            <Button fx:id="okButton" layoutX="327.0" layoutY="192.0" mnemonicParsing="false" onAction="#okFunction" prefHeight="48.0" prefWidth="119.0" styleClass="gradient-border-button2" text="OK" />
+            <Button fx:id="noButton" layoutX="430.0" layoutY="189.0" mnemonicParsing="false" onAction="#noFunction" prefHeight="48.0" prefWidth="99.0" styleClass="gradient-border-button" text="No" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

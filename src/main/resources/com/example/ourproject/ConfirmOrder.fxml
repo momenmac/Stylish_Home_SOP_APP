@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="757.0" style="-fx-border-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #d12e7e, #6e1569); -fx-border-width: 5px;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ourproject.ConfirmOrder">
+   <children>
+      <Label fx:id="title" alignment="CENTER" layoutX="-5.0" layoutY="14.0" prefHeight="67.0" prefWidth="764.0" styleClass="addOrViewTitle" text="Order Confirmation" textAlignment="CENTER" />
+      <VBox layoutX="63.0" layoutY="184.0" prefHeight="250.0" prefWidth="617.0">
+         <children>
+            <HBox prefHeight="54.0" prefWidth="611.0">
+               <children>
+                  <Label prefHeight="54.0" prefWidth="209.0" styleClass="labelsInAddOrView" text="Emp Name" />
+                  <AnchorPane prefHeight="54.0" prefWidth="394.0">
+                     <children>
+                        <TextField fx:id="EmpName" editable="false" layoutX="9.0" layoutY="7.0" prefHeight="45.0" prefWidth="376.0" styleClass="addOrViewTextFieldDisabled" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="54.0" prefWidth="611.0">
+               <children>
+                  <Label fx:id="counterpartyLabel" prefHeight="54.0" prefWidth="209.0" styleClass="labelsInAddOrView" text="Customer Name" />
+                  <AnchorPane prefHeight="54.0" prefWidth="394.0">
+                     <children>
+                        <TextField fx:id="counterpartyName" editable="false" layoutX="9.0" layoutY="7.0" prefHeight="45.0" prefWidth="376.0" styleClass="addOrViewTextFieldDisabled" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="54.0" prefWidth="611.0">
+               <children>
+                  <Label prefHeight="52.0" prefWidth="204.0" styleClass="labelsInAddOrView" text="Dicount" />
+                  <AnchorPane prefHeight="54.0" prefWidth="394.0">
+                     <children>
+                        <TextField fx:id="Discount" editable="false" layoutX="14.0" layoutY="4.0" prefHeight="45.0" prefWidth="146.0" styleClass="addOrViewTextFieldDisabled" text="0.00" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="54.0" prefWidth="611.0">
+               <children>
+                  <Label prefHeight="53.0" prefWidth="202.0" styleClass="labelsInAddOrView" text="Total" />
+                  <AnchorPane prefHeight="54.0" prefWidth="394.0">
+                     <children>
+                        <TextField fx:id="total" editable="false" layoutX="14.0" layoutY="4.0" prefHeight="45.0" prefWidth="223.0" styleClass="addOrViewTextFieldDisabled" text="0.00" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children></VBox>
+      <Button fx:id="cancelButton" layoutX="518.0" layoutY="436.0" mnemonicParsing="false" onAction="#cancelClicked" prefHeight="51.0" prefWidth="200.0" styleClass="gradient-border-button" text="cancel" />
+      <Button fx:id="addButton" layoutX="290.0" layoutY="437.0" mnemonicParsing="false" onAction="#addClicked" prefHeight="51.0" prefWidth="200.0" styleClass="gradient-border-button2" text="Mark as Paied" />
+      <AnchorPane fx:id="addImageButton" layoutX="550.0" layoutY="305.0" onMouseClicked="#printOrder" prefHeight="92.0" prefWidth="97.0" styleClass="pink" visible="false">
+         <children>
+            <ImageView fitHeight="98.0" fitWidth="61.0" layoutX="19.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@UI/Print.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="55.0" layoutY="120.0" prefHeight="54.0" prefWidth="209.0" styleClass="labelsInAddOrView" text="Order Date" />
+      <TextField fx:id="orderDate" editable="false" layoutX="181.0" layoutY="125.0" prefHeight="45.0" prefWidth="161.0" styleClass="addOrViewTextFieldDisabled" />
+      <Label alignment="CENTER" layoutX="348.0" layoutY="120.0" prefHeight="54.0" prefWidth="170.0" styleClass="labelsInAddOrView" text="Order Number" />
+      <TextField fx:id="orderNumber" alignment="CENTER" editable="false" layoutX="521.0" layoutY="126.0" prefHeight="45.0" prefWidth="161.0" style="-fx-background-color: transparent; -fx-padding: 5 10 5 10 px;" styleClass="addOrViewTextField" text="1" />
+      <Button fx:id="delayButton" layoutX="63.0" layoutY="437.0" mnemonicParsing="false" onAction="#addClicked" prefHeight="51.0" prefWidth="200.0" styleClass="gradient-border-button2" text="Debit for Delay" />
+      <AnchorPane fx:id="addProductOverlay" prefHeight="528.0" prefWidth="757.0" styleClass="overlay" visible="false" />
+   </children>
+</AnchorPane>
